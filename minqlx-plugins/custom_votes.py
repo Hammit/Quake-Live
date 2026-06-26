@@ -356,7 +356,7 @@ class custom_votes(minqlx.Plugin):
                 return minqlx.RET_STOP_ALL
 
         if vote.lower() == "roundtimelimit":
-            # enables the '/cv roundtimelimit [90/120/180]' command
+            # enables the '/cv roundtimelimit [30/45/60/90/120/180]' command
             if args.lower() == "180":
                 self.callvote("set roundtimelimit 180", "round time limit: 180")
                 self.msg("{}^7 called a vote.".format(caller.name))
