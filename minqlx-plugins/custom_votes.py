@@ -369,8 +369,20 @@ class custom_votes(minqlx.Plugin):
                 self.callvote("set roundtimelimit 90", "round time limit: 90")
                 self.msg("{}^7 called a vote.".format(caller.name))
                 return minqlx.RET_STOP_ALL
+            if args.lower() == "60":
+                self.callvote("set roundtimelimit 60", "round time limit: 60")
+                self.msg("{}^7 called a vote.".format(caller.name))
+                return minqlx.RET_STOP_ALL
+            if args.lower() == "45":
+                self.callvote("set roundtimelimit 45", "round time limit: 45")
+                self.msg("{}^7 called a vote.".format(caller.name))
+                return minqlx.RET_STOP_ALL
+            if args.lower() == "30":
+                self.callvote("set roundtimelimit 30", "round time limit: 30")
+                self.msg("{}^7 called a vote.".format(caller.name))
+                return minqlx.RET_STOP_ALL
             else:
-                caller.tell("^2/cv roundtimelimit [90/120/180]^7 is the usage for this callvote command.")
+                caller.tell("^2/cv roundtimelimit [30/45/60/90/120/180]^7 is the usage for this callvote command.")
                 return minqlx.RET_STOP_ALL
 
         if vote.lower() == "balance":
